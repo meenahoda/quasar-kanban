@@ -16,7 +16,7 @@ module.exports = function (ctx) {
     ],
     supportIE: false,
     build: {
-      publicPath: 'qscript-kanban',
+      publicPath: 'quasar-kanban',
       scopeHoisting: true,
       // vueRouterMode: 'history',
       // vueCompiler: true,

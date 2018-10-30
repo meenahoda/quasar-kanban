@@ -16,6 +16,7 @@ module.exports = function (ctx) {
     ],
     supportIE: false,
     build: {
+      publicPath: 'qscript-kanban',
       scopeHoisting: true,
       // vueRouterMode: 'history',
       // vueCompiler: true,

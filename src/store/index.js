@@ -3,12 +3,13 @@ import Vuex from 'vuex'
 
 import app from './app'
 
+import localStoragePlugin from 'plugins/localStorage'
+
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  modules: {
-    app
-  }
+  plugins: [ localStoragePlugin ],
+  modules: { app }
 })
 
 export default store

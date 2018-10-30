@@ -3,8 +3,7 @@
 module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
-    plugins: [
-    ],
+    plugins: [],
     css: [
       'app.styl'
     ],

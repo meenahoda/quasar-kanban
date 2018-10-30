@@ -45,6 +45,7 @@ module.exports = function (ctx) {
         'QCard',
         'QCardTitle',
         'QCardMain',
+        'QCardActions',
         'QInput',
         'QBtn',
         'QChip'

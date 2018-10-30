@@ -23,6 +23,9 @@
           </div>
         </q-card-title>
         <q-card-main>{{item.text}}</q-card-main>
+        <q-card-actions align="end">
+          <q-btn icon="delete" flat round dense color="light" @click="removeItem(item)" />
+        </q-card-actions>
       </q-card>
     </div>
   </q-page>
@@ -39,6 +42,9 @@ export default {
     items: s => [...s.app.items.todo, ...s.app.items.inProgress, ...s.app.items.done]
   }),
   methods: {
+    removeItem (item) {
+      this.$store.commit('app/removeItem', item)
+    },
     getLane (item) {
       if (this.$store.state.app.items.todo.includes(item)) {
         return 'To-Do'

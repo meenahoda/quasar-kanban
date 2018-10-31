@@ -10,7 +10,7 @@
         </q-chip>
       </div>
     </div>
-    <draggable v-model="draggables" :options="{ group: 'default' }" style="min-height: 150px;">
+    <draggable v-model="draggables" :options="{ group: 'default' }" style="min-height: 100vh;">
       <div
         v-for="(item, idx) in items"
         :key="idx"

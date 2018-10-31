@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/quasar-kanban/precache-manifest.8281654fba40f0fefa6b72075b5ea9cd.js"
+  "/quasar-kanban/precache-manifest.d19097072b9f5197ee86c28795b64930.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "quasar-kanban-board"});

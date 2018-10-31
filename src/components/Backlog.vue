@@ -2,31 +2,23 @@
   <q-page padding>
     <new-item />
 
-    <div>
-      <q-card
-        inline
-        style="width: 30%"
-        v-for="(item, idx) in items"
-        :key="idx"
-        class="q-mr-md q-mt-md"
-        color="white"
-        text-color="dark"
-      >
-        <q-card-title>
-          <div class="row">
-            <div class="col">#{{item.id}}</div>
-            <div class="col text-right">
-              <q-chip small dense :color="getChipColor(getLane(item))">
-                {{getLane(item)}}
-              </q-chip>
-            </div>
-          </div>
-        </q-card-title>
-        <q-card-main>{{item.text}}</q-card-main>
-        <q-card-actions align="end">
-          <q-btn icon="delete" flat round dense color="light" @click="removeItem(item)" />
-        </q-card-actions>
-      </q-card>
+    <div
+      v-for="item in items"
+      :key="item.id"
+      class="row bg-white q-my-md q-pa-md shadow-1"
+    >
+      <div class="col-1 text-faded">
+        #{{item.id}}
+      </div>
+      <div class="col">
+        {{item.text}}
+      </div>
+      <div class="col text-right">
+        <q-chip small dense :color="getChipColor(getLane(item))">
+          {{getLane(item)}}
+        </q-chip>
+        <q-btn icon="delete" flat round dense color="light" @click="removeItem(item)" />
+      </div>
     </div>
   </q-page>
 </template>

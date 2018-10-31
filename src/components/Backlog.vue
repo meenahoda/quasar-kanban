@@ -6,6 +6,7 @@
       v-for="item in items"
       :key="item.id"
       class="row bg-white q-my-md q-pa-md shadow-1"
+      style="border-radius: 3px;"
     >
       <div class="col-xs-2 col-sm-1 text-weight-light">
         #{{item.id}}

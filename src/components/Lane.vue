@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mr-md">
+  <div class="q-mr-md q-pa-sm" style="border: 1px solid #ccc; border-radius: 3px;">
     <div class="row q-mb-md">
       <div class="col text-weight-light ellipsis">
         {{title}}
@@ -10,7 +10,7 @@
         </q-chip>
       </div>
     </div>
-    <draggable v-model="draggables" :options="{ group: 'default' }" style="min-height: 100vh;">
+    <draggable v-model="draggables" :options="{ group: 'default' }" style="min-height: calc(100vh - 160px);">
       <div
         v-for="(item, idx) in items"
         :key="idx"

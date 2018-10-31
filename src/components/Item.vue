@@ -5,7 +5,9 @@
     class="q-mb-md"
   >
     <q-card-title>#{{item.id}}</q-card-title>
-    <q-card-main>{{item.text}}</q-card-main>
+    <q-card-main>
+      <span class="ellipsis-3-lines">{{item.text}}</span>
+    </q-card-main>
     <q-card-actions align="end">
       <q-btn icon="delete" flat round dense color="light" @click="removeItem(item)" />
     </q-card-actions>

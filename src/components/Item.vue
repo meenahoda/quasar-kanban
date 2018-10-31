@@ -19,7 +19,15 @@ export default {
   props: [ 'item' ],
   methods: {
     removeItem (item) {
-      this.$store.commit('app/removeItem', item)
+      this.$q.dialog({
+        title: 'Remove',
+        message: `Are you sure you want to remove Task #${item.id}?`,
+        ok: 'Yes',
+        cancel: 'No',
+        color: 'secondary'
+      }).then(() => {
+        this.$store.commit('app/removeItem', item)
+      }).catch(() => {})
     }
   }
 }

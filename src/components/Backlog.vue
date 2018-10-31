@@ -7,10 +7,10 @@
       :key="item.id"
       class="row bg-white q-my-md q-pa-md shadow-1"
     >
-      <div class="col-1 text-faded">
+      <div class="col-xs-2 col-sm-1 text-weight-light">
         #{{item.id}}
       </div>
-      <div class="col">
+      <div class="col ellipsis">
         {{item.text}}
       </div>
       <div class="col text-right">
@@ -35,7 +35,15 @@ export default {
   }),
   methods: {
     removeItem (item) {
-      this.$store.commit('app/removeItem', item)
+      this.$q.dialog({
+        title: 'Remove',
+        message: `Are you sure you want to remove Task #${item.id}?`,
+        ok: 'Yes',
+        cancel: 'No',
+        color: 'secondary'
+      }).then(() => {
+        this.$store.commit('app/removeItem', item)
+      }).catch(() => {})
     },
     getLane (item) {
       if (this.$store.state.app.items.todo.includes(item)) {

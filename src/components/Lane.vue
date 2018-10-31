@@ -1,7 +1,7 @@
 <template>
   <div class="q-mr-md">
-    <div class="row q-mb-md text-faded">
-      <div class="col">
+    <div class="row q-mb-md">
+      <div class="col text-weight-light ellipsis">
         {{title}}
       </div>
       <div class="col text-right">
